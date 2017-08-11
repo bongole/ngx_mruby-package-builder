@@ -25,3 +25,10 @@ ubuntu1604:
   command: cp -a /usr/local/src/nginx_1.13.4-1~xenial_amd64.deb /tmp/nginx-ngx_mruby_1.13.4-1~xenial_amd64.deb
   volumes:
     - .:/tmp:rw
+
+passenger-ruby23:
+  dockerfile: Dockerfile.passenger-ruby23
+  build: .
+  command: bash -c 'cp /usr/local/src/nginx-*.deb /tmp/'
+  volumes:
+    - .:/tmp:rw
