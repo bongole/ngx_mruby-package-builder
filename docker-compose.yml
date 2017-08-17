@@ -32,3 +32,10 @@ passenger-ruby23:
   command: bash -c 'cp /usr/local/src/nginx-*.deb /tmp/'
   volumes:
     - .:/tmp:rw
+
+baseimage:
+  dockerfile: Dockerfile.baseimage
+  build: .
+  command: bash -c 'cp /usr/local/src/nginx-*.deb /tmp/'
+  volumes:
+    - .:/tmp:rw

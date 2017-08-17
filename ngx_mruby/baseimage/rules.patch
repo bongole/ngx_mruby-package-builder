@@ -1,0 +1,12 @@
+--- debian/rules.orig   2017-08-17 13:23:56.889063999 +0000
++++ debian/rules        2017-08-17 13:24:40.360789000 +0000
+@@ -136,7 +136,8 @@
+ 			--add-module=$(MODULESDIR)/nginx-lua \
+ 			--add-module=$(MODULESDIR)/nginx-upload-progress \
+ 			--add-module=$(MODULESDIR)/nginx-upstream-fair \
+-			--add-module=$(MODULESDIR)/ngx_http_substitutions_filter_module
++			--add-module=$(MODULESDIR)/ngx_http_substitutions_filter_module \
++			--add-module=/usr/local/src/ngx_mruby
+ 
+ %:
+ 	dh $@ --with systemd
